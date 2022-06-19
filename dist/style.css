@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap:wght@300;400;700;900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Josefin Sans";
+  font-size: 18px;
+  margin: auto;
+}
+
+#body {
+  display: grid;
+  grid-template-rows: 1fr 6fr;
+  place-items: center;
+}
+
+#header {
+  background-color: rgb(219, 76, 63);
+  min-height: 100%;
+  min-width: 100%;
+}
+
+h1 {
+  color: white;
+  margin-top: 30px;
+  margin-left: 50px;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  height: 100%;
+  width: 100%;
+}
+
+#sidebar {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background-color: rgb(250, 250, 250);
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-right: 10px;
+}
+
+.top {
+  display: grid;
+  height: 130px;
+}
+
+.icon, .add-project {
+  display: grid;
+  grid-template-columns: 20px 50px 10px;
+  align-items: center;
+  column-gap: 15px;
+  font-size: 19px;
+  height: 40px;
+  width: 250px;
+  cursor: pointer;
+  padding-left: 10px;
+}
+
+.icon:hover, .add-project:hover {
+  background-color: white;
+  border-radius: 5px;
+}
+
+.delete {
+  margin-left: 100px;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.display-none {
+  display: none;
+}
+
+.inbox-color {
+  filter: invert(44%) sepia(71%) saturate(883%) hue-rotate(155deg)
+    brightness(97%) contrast(102%);
+}
+
+.today-color {
+  filter: invert(47%) sepia(97%) saturate(2898%) hue-rotate(90deg)
+    brightness(113%) contrast(94%);
+}
+
+.upcoming-color {
+  filter: invert(11%) sepia(100%) saturate(6214%) hue-rotate(297deg)
+    brightness(97%) contrast(99%);
+}
+
+h3 {
+  font-size: 25px;
+  padding-left: 10px;
+}
+
+.add-project-color {
+  height: 24px;
+  width: 24px;
+  filter: invert(55%) sepia(29%) saturate(930%) hue-rotate(316deg)
+    brightness(88%) contrast(100%);
+}
+
+.project-color {
+  height: 24px;
+  width: 24px;
+}
+
+.text, .task-text {
+  padding-top: 2.5px;
+  width: 200px;
+  align-self: center;
+}
+
+.task-text {
+  padding-top: 2.5px;
+  width: 200px;
+  align-self: center;
+}
+
+#main {
+  padding-top: 5px;
+  padding-left: 80px;
+}
+
+#main > h1 {
+  font-weight: 900;
+  font-size: 30px;
+}
+
+.todo-icon {
+  height: 24px;
+  width: 24px;
+}
+
+.todo {
+  display: grid;
+  grid-template-columns: 20px 50px 100px 10px;
+  align-items: center;
+  column-gap: 15px;
+  font-size: 19px;
+  height: 60px;
+  width: 800px;
+  cursor: pointer;
+}
+
+.date {
+  padding-top: 5px;
+  margin-right: -550px;
+  justify-self: end;
+  align-self: center;
+}
+
+.todo .task-text {
+  width: 500px;
+}
+
+.delete-task {
+  font-weight: 900;
+  margin-left: 530px;
+  margin-top: 5px;
+}
+
+hr {
+  width: 760px;
+  justify-self: center;
+  margin-left: -1px;
+  padding-left: 100px;
+  color: black;
+  background-color: black;
+  opacity: 0.2;
+}
+
+.add-task {
+  display: grid;
+  grid-template-columns: 20px 50px 100px;
+  align-items: center;
+  column-gap: 15px;
+  font-size: 19px;
+  height: 40px;
+  width: 760px;
+  cursor: pointer;
+}
+
+.add-task-icon {
+  margin-left: 5px;
+  height: 24px;
+  width: 24px;
+  filter: invert(55%) sepia(29%) saturate(930%) hue-rotate(316deg)
+    brightness(88%) contrast(100%);
+}
+
+.add-task:hover {
+  background-color: rgb(250, 250, 250);
+  border-radius: 5px;
+}
+
+input[type="text"] {
+  grid-column: span 2;
+  padding-left: 10px;
+  padding-top: 2px;
+  height: 40px;
+  width: 250px;
+  font-size: 19px;
+  font-family: "Josefin Sans";
+  border: 2px solid rgb(230, 230, 230);
+  border-radius: 5px;
+  outline: none;
+}
+
+#project-form {
+  display: grid;
+  grid-template-columns: 125px 125px;
+  grid-template-rows: 40px 40px;
+  place-items: center;
+  row-gap: 4px;
+}
+
+button[type="submit"], button[type="reset"] {
+  text-align: center;
+  width: 120px;
+  height: 37px;
+  padding: 12px 40px;
+  appearance: none;
+  outline: none;
+  border: 0;
+  border-radius: 10px;
+  font-family: "Josefin Sans";
+  font-size: 17px;
+  cursor: pointer;
+}
+
+#submit-btn {
+  background-color: rgb(225, 107, 96);
+  position: relative;
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+#submit-btn:hover {
+  background-color: rgb(222, 91, 80);
+}
+
+.symbol {
+  position: absolute;
+  color: white;
+}
+
+#reset-btn {
+  position: relative;
+  display: grid;
+  place-items: center;
+  border: 2px solid rgb(230, 230, 230);
+  background-color: white;
+}
+
+#reset-btn:hover {
+  background-color: rgb(250, 250, 250);
+}
+
+.cancel {
+  position: absolute;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.toggled {
+  display: none;
+}
+
+.active {
+  font-weight: 900;
+  background-color: white;
+  border-radius: 5px;
+}
+
+#add-project {
+  margin-top: 5px;
+}
+
+textarea {
+  resize: none;
+}
+
+input[name="title"] {
+  width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input[type="date"] {
+  border-radius: 10px;
+  border: 2px solid rgb(230, 230, 230);
+  font-family: "Josefin Sans";
+  font-size: 16px;
+  padding: 5px;
+  margin-right: 15px;
+}
+
+#task-submit-btn {
+  background-color: rgb(225, 107, 96);
+  position: relative;
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+  width: 370px;
+  height: 40px;
+  font-weight: 900;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#task-submit-btn:hover {
+  background-color: rgb(222, 91, 80);
+}
+
+.symbol {
+  position: absolute;
+  color: white;
+}
+
+#task-reset-btn {
+  width: 370px;
+  height: 40px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  border: 2px solid rgb(230, 230, 230);
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#task-reset-btn:hover {
+  background-color: rgb(250, 250, 250);
+}
+
+#task-form {
+  display: grid;
+  grid-template-columns: 360px 360px;
+  grid-template-rows: 50px 50px;
+  place-items: center;
+  column-gap: 30px;
+}
+
+#task-form .cancel {
+    position: absolute;
+    font-size: 18px;
+    font-weight: 700;
+}

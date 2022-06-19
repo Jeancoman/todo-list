@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body id="body">
+    <header id="header">
+        <h1>TODO LIST</h1>
+    </header>
+    <main id="container">
+        <aside id="sidebar">
+            <div class="top">
+                <div id="inbox" class="icon" data-project="Inbox">
+                    <img src="./img/inbox.svg" alt="" class="inbox-color">
+                    <div class="text project-text">Inbox</div>
+                </div>
+                <div id="today" class="icon" data-project="Today">
+                    <img src="./img/calendar-today.svg" alt="" class="today-color">
+                    <div class="text project-text">Today</div>
+                </div>
+                <div id="upcoming" class="icon" data-project="Upcoming">
+                    <img src="./img/calendar-month.svg" alt="" class="upcoming-color">
+                    <div class="text project-text">Upcoming</div>
+                </div>
+            </div>
+            <div class="bottom">
+                <h3>Projects</h3>
+                <div id="add-project" class="add-project">
+                    <img src="./img/add.svg" alt="" class="add-project-color">
+                    <div class="text">Add Project</div>
+                </div>
+                <div class="input toggled">
+                    <form id="project-form" class="form">
+                        <input type="text" name="name" id="name">
+                        <button type="submit" id="submit-btn"><span class="symbol">+</span></button>
+                        <button type="reset" id="reset-btn"><span class="cancel">Cancel</span></button>
+                    </form>
+                </div>
+            </div>
+        </aside>
+        <section id="main">
+            <h2 id="title">Inbox</h2>
+            <div id="add-task" class="add-task">
+                <img src="./img/add.svg" alt="" class="add-task-icon">
+                <div class="task-text">Add Task</div>
+            </div>
+            <div id="task-container" class="toggled">
+                <form id="task-form">
+                    <input type="text" name="title" id="title">
+                    <button type="submit" id="task-submit-btn"><span class="symbol">+</span></button>
+                    <button type="reset" id="task-reset-btn"><span class="cancel">Cancel</span></button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
